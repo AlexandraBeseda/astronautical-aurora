@@ -32,7 +32,7 @@ A lightweight task management app built with **Astro**, **Svelte**, **Prisma**, 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-user/astronautical-aurora.git
+git clone https://github.com/AlexandraBeseda/astronautical-aurora.git
 cd astronautical-aurora
 
 # 2. Install dependencies
