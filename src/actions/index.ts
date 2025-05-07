@@ -1,6 +1,6 @@
 import { defineAction } from 'astro:actions';
 import { z } from 'astro:schema';
-import { handleCreateTask, handleDeleteTask, handleGetAllTasks, handleGetFilteredTasks, handleGetTaskById, handleUpdateTask } from '../../lib/server/actions';
+import { handleCreateTask, handleDeleteTask, handleGenerateDescription, handleGetAllTasks, handleGetFilteredTasks, handleGetTaskById, handleUpdateTask } from '../../lib/server/actions';
 
 export const server = {
   createTask: defineAction({
@@ -51,5 +51,12 @@ export const server = {
       id: z.coerce.number(),
     }),
     handler: handleDeleteTask
-})
+}),
+
+generateDescription: defineAction({
+  input: z.object({
+    title: z.string().min(5),
+  }),
+  handler: handleGenerateDescription,
+}),
 };

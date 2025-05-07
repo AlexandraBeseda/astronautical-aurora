@@ -40,6 +40,8 @@ npm install
 
 # 4. Create the .env file with the following content:
 'DATABASE_URL="file:./dev.db"'
+'OPENAI_API_KEY="sk-proj..."'
+#check your billing plan on openAI
 
 # 5. Generate Prisma client from schema
 npx prisma generate
